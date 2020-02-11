@@ -4655,51 +4655,59 @@ assumption.check = function(x1,x2,x3,x4=NULL,x5=NULL,x6=NULL,conf.level=0.95){
   }
 }
 
-post.fit = function(dataframe,x1,x2,x3,x4=NULL,x5=NULL,x6=NULL){
+post.pred.check <- function(anovafit, ngroups, out, reps = 50, eta){
   
-  x1Seq=seq(min(x1),max(x1),length.out = 100)
-  x2Seq=seq(min(x2),max(x2),length.out = 100)
-  x3Seq=seq(min(x3),max(x3),length.out = 100)
-  
-  if(length(x4)>1){
-    x4Seq=seq(min(x4),max(x4),length.out = 100)
-  }
-  if(length(x5)){
-    x5Seq=seq(min(x5),max(x5),length.out = 100)
-  }
-  if(length(x6)){
-    x6Seq=seq(min(x6),max(x6),length.out = 100)
-  }
-  
-  if(length(x4)>1 && length(x5)>1 && length(x6)>1){
-    hist(c(x1,x2,x3,x4,x5,x6),main="Posterior fit",xlab="Original data",ylab="Posterior density",freq=FALSE,ylim=c(0,1))
-    lines(x1Seq,dnorm(x1Seq,mean=mean(dataframe$mu1),sd=mean(dataframe$sigma1Sq))/6,col="blue")
-    lines(x2Seq,dnorm(x2Seq,mean=mean(dataframe$mu2),sd=mean(dataframe$sigma2Sq))/6,col="red")
-    lines(x3Seq,dnorm(x3Seq,mean=mean(dataframe$mu3),sd=mean(dataframe$sigma3Sq))/6,col="purple")
-    lines(x4Seq,dnorm(x4Seq,mean=mean(dataframe$mu4),sd=mean(dataframe$sigma4Sq))/6,col="orange")
-    lines(x5Seq,dnorm(x5Seq,mean=mean(dataframe$mu5),sd=mean(dataframe$sigma5Sq))/6,col="green")
-    lines(x6Seq,dnorm(x6Seq,mean=mean(dataframe$mu6),sd=mean(dataframe$sigma6Sq))/6,col="cornflowerblue")
-  }
-  if(length(x4)>1 && length(x5)>1 && is.null(x6)){
-    hist(c(x1,x2,x3,x4,x5),main="Posterior fit",xlab="Original data",ylab="Posterior density",freq=FALSE,ylim=c(0,1))
-    lines(x1Seq,dnorm(x1Seq,mean=mean(dataframe$mu1),sd=mean(dataframe$sigma1Sq))/5,col="blue")
-    lines(x2Seq,dnorm(x2Seq,mean=mean(dataframe$mu2),sd=mean(dataframe$sigma2Sq))/5,col="red")
-    lines(x3Seq,dnorm(x3Seq,mean=mean(dataframe$mu3),sd=mean(dataframe$sigma3Sq))/5,col="purple")
-    lines(x4Seq,dnorm(x4Seq,mean=mean(dataframe$mu4),sd=mean(dataframe$sigma4Sq))/5,col="orange")
-    lines(x5Seq,dnorm(x5Seq,mean=mean(dataframe$mu5),sd=mean(dataframe$sigma5Sq))/5,col="green")
-  }
-  if(length(x4)>1 && is.null(x5) && is.null(x6)){
-    hist(c(x1,x2,x3,x4),main="Posterior fit",xlab="Original data",ylab="Posterior density",freq=FALSE,ylim=c(0,1))
-    lines(x1Seq,dnorm(x1Seq,mean=mean(dataframe$mu1),sd=mean(dataframe$sigma1Sq))/4,col="blue")
-    lines(x2Seq,dnorm(x2Seq,mean=mean(dataframe$mu2),sd=mean(dataframe$sigma2Sq))/4,col="red")
-    lines(x3Seq,dnorm(x3Seq,mean=mean(dataframe$mu3),sd=mean(dataframe$sigma3Sq))/4,col="purple")
-    lines(x4Seq,dnorm(x4Seq,mean=mean(dataframe$mu4),sd=mean(dataframe$sigma4Sq))/4,col="orange")
-  }
-  if(is.null(x4) && is.null(x5) && is.null(x6)){
-    hist(c(x1,x2,x3),main="Posterior fit",xlab="Original data",ylab="Posterior density",freq=FALSE,ylim=c(0,1))
-    lines(x1Seq,dnorm(x1Seq,mean=mean(dataframe$mu1),sd=mean(dataframe$sigma1Sq))/3,col="blue")
-    lines(x2Seq,dnorm(x2Seq,mean=mean(dataframe$mu2),sd=mean(dataframe$sigma2Sq))/3,col="red")
-    lines(x3Seq,dnorm(x3Seq,mean=mean(dataframe$mu3),sd=mean(dataframe$sigma3Sq))/3,col="purple")
+  plot(density(out),main="Posterior predictive check")
+  for(i in 1:reps){
+    mu1 = sample(anovafit$mu1,size = 1)
+    mu2 = sample(anovafit$mu2,size = 1)
+    mu3 = sample(anovafit$mu3,size = 1)
+    sigma1Sq = sample(anovafit$sigma1Sq,size = 1)
+    sigma2Sq = sample(anovafit$sigma2Sq,size = 1)
+    sigma3Sq = sample(anovafit$sigma3Sq,size = 1)
+    if(ngroups > 3){
+      mu4 = sample(anovafit$mu4,size = 1)
+      sigma4Sq = sample(anovafit$sigma4Sq,size = 1)
+    }
+    if(ngroups > 4){
+      mu5 = sample(anovafit$mu5,size = 1)
+      sigma5Sq = sample(anovafit$sigma5Sq,size = 1)
+    }
+    if(ngroups > 5){
+      mu6 = sample(anovafit$mu6,size = 1)
+      sigma6Sq = sample(anovafit$sigma6Sq,size = 1)
+    }
+    x = seq(min(out),max(out),length.out = 50)
+    if(ngroups == 3){
+      lines(x, eta[1]*dnorm(x,mu1,sigma1Sq) + 
+              eta[2]*dnorm(x,mu2,sigma2Sq) +
+              eta[3]*dnorm(x,mu3,sigma3Sq),
+            col = rgb(red = 0, green = 0, blue = 1, alpha = 0.2))
+    }
+    if(ngroups == 4){
+      lines(x, eta[1]*dnorm(x,mu1,sigma1Sq) + 
+              eta[2]*dnorm(x,mu2,sigma2Sq) +
+              eta[3]*dnorm(x,mu3,sigma3Sq) +
+              eta[4]*dnorm(x,mu4,sigma4Sq),
+            col = rgb(red = 0, green = 0, blue = 1, alpha = 0.2))
+    }
+    if(ngroups == 5){
+      lines(x, eta[1]*dnorm(x,mu1,sigma1Sq) + 
+              eta[2]*dnorm(x,mu2,sigma2Sq) +
+              eta[3]*dnorm(x,mu3,sigma3Sq) +
+              eta[4]*dnorm(x,mu4,sigma4Sq) +
+              eta[5]*dnorm(x,mu5,sigma5Sq),
+            col = rgb(red = 0, green = 0, blue = 1, alpha = 0.2))
+    }
+    if(ngroups == 6){
+      lines(x, eta[1]*dnorm(x,mu1,sigma1Sq) + 
+              eta[2]*dnorm(x,mu2,sigma2Sq) +
+              eta[3]*dnorm(x,mu3,sigma3Sq) +
+              eta[4]*dnorm(x,mu4,sigma4Sq) +
+              eta[5]*dnorm(x,mu5,sigma5Sq) +
+              eta[6]*dnorm(x,mu6,sigma6Sq),
+            col = rgb(red = 0, green = 0, blue = 1, alpha = 0.2))
+    }
   }
 }
 

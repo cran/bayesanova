@@ -5,3 +5,4 @@ importFrom("stats", "density", "qqline", "qqnorm", "quantile", "rnorm",
              "shapiro.test", "var")
 importFrom("grDevices", "dev.new")
 importFrom("stats", "dnorm")
+importFrom("grDevices", "rgb")
