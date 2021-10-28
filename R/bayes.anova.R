@@ -3280,8 +3280,8 @@ anovaplot = function(dataframe, type="rope", sd="sd", ci=0.95){
     lines(x=c(-0.8,-0.5),y=c(0.04,0.04),type="l",lwd=2,col="green")
     lines(x=c(0.5,0.8),y=c(0.04,0.04),type="l",lwd=2,col="green")
     # ROPE for large effect
-    lines(x=c(-2,-0.8),y=c(0.04,0.04),type="l",lwd=2,col="purple")
-    lines(x=c(0.8,2),y=c(0.04,0.04),type="l",lwd=2,col="purple")
+    lines(x=c(-10,-0.8),y=c(0.04,0.04),type="l",lwd=2,col="purple")
+    lines(x=c(0.8,10),y=c(0.04,0.04),type="l",lwd=2,col="purple")
     
     abline(v=0.8,col="purple",lwd=0.5,lty="dashed")
     abline(v=-0.8,col="purple",lwd=0.5,lty="dashed")
@@ -3331,8 +3331,8 @@ anovaplot = function(dataframe, type="rope", sd="sd", ci=0.95){
     lines(x=c(-0.8,-0.5),y=c(0.04,0.04),type="l",lwd=2,col="green")
     lines(x=c(0.5,0.8),y=c(0.04,0.04),type="l",lwd=2,col="green")
     # ROPE for large effect
-    lines(x=c(-2,-0.8),y=c(0.04,0.04),type="l",lwd=2,col="purple")
-    lines(x=c(0.8,2),y=c(0.04,0.04),type="l",lwd=2,col="purple")
+    lines(x=c(-10,-0.8),y=c(0.04,0.04),type="l",lwd=2,col="purple")
+    lines(x=c(0.8,10),y=c(0.04,0.04),type="l",lwd=2,col="purple")
     
     abline(v=0.8,col="purple",lwd=0.5,lty="dashed")
     abline(v=-0.8,col="purple",lwd=0.5,lty="dashed")
@@ -3381,8 +3381,8 @@ anovaplot = function(dataframe, type="rope", sd="sd", ci=0.95){
     lines(x=c(-0.8,-0.5),y=c(0.04,0.04),type="l",lwd=2,col="green")
     lines(x=c(0.5,0.8),y=c(0.04,0.04),type="l",lwd=2,col="green")
     # ROPE for large effect
-    lines(x=c(-2,-0.8),y=c(0.04,0.04),type="l",lwd=2,col="purple")
-    lines(x=c(0.8,2),y=c(0.04,0.04),type="l",lwd=2,col="purple")
+    lines(x=c(-10,-0.8),y=c(0.04,0.04),type="l",lwd=2,col="purple")
+    lines(x=c(0.8,10),y=c(0.04,0.04),type="l",lwd=2,col="purple")
     
     abline(v=0.8,col="purple",lwd=0.5,lty="dashed")
     abline(v=-0.8,col="purple",lwd=0.5,lty="dashed")
@@ -3548,8 +3548,8 @@ anovaplot = function(dataframe, type="rope", sd="sd", ci=0.95){
       lines(x=c(-0.8,-0.5),y=c(0.04,0.04),type="l",lwd=2,col="green")
       lines(x=c(0.5,0.8),y=c(0.04,0.04),type="l",lwd=2,col="green")
       # ROPE for large effect
-      lines(x=c(-2,-0.8),y=c(0.04,0.04),type="l",lwd=2,col="purple")
-      lines(x=c(0.8,2),y=c(0.04,0.04),type="l",lwd=2,col="purple")
+      lines(x=c(-10,-0.8),y=c(0.04,0.04),type="l",lwd=2,col="purple")
+      lines(x=c(0.8,10),y=c(0.04,0.04),type="l",lwd=2,col="purple")
       
       abline(v=0.8,col="purple",lwd=0.5,lty="dashed")
       abline(v=-0.8,col="purple",lwd=0.5,lty="dashed")
@@ -3817,8 +3817,8 @@ anovaplot = function(dataframe, type="rope", sd="sd", ci=0.95){
       lines(x=c(-0.8,-0.5),y=c(0.04,0.04),type="l",lwd=2,col="green")
       lines(x=c(0.5,0.8),y=c(0.04,0.04),type="l",lwd=2,col="green")
       # ROPE for large effect
-      lines(x=c(-2,-0.8),y=c(0.04,0.04),type="l",lwd=2,col="purple")
-      lines(x=c(0.8,2),y=c(0.04,0.04),type="l",lwd=2,col="purple")
+      lines(x=c(-10,-0.8),y=c(0.04,0.04),type="l",lwd=2,col="purple")
+      lines(x=c(0.8,10),y=c(0.04,0.04),type="l",lwd=2,col="purple")
       
       abline(v=0.8,col="purple",lwd=0.5,lty="dashed")
       abline(v=-0.8,col="purple",lwd=0.5,lty="dashed")
@@ -3869,8 +3869,8 @@ anovaplot = function(dataframe, type="rope", sd="sd", ci=0.95){
       lines(x=c(-0.8,-0.5),y=c(0.04,0.04),type="l",lwd=2,col="green")
       lines(x=c(0.5,0.8),y=c(0.04,0.04),type="l",lwd=2,col="green")
       # ROPE for large effect
-      lines(x=c(-2,-0.8),y=c(0.04,0.04),type="l",lwd=2,col="purple")
-      lines(x=c(0.8,2),y=c(0.04,0.04),type="l",lwd=2,col="purple")
+      lines(x=c(-10,-0.8),y=c(0.04,0.04),type="l",lwd=2,col="purple")
+      lines(x=c(0.8,10),y=c(0.04,0.04),type="l",lwd=2,col="purple")
       
       abline(v=0.8,col="purple",lwd=0.5,lty="dashed")
       abline(v=-0.8,col="purple",lwd=0.5,lty="dashed")
@@ -3920,8 +3920,8 @@ anovaplot = function(dataframe, type="rope", sd="sd", ci=0.95){
       lines(x=c(-0.8,-0.5),y=c(0.04,0.04),type="l",lwd=2,col="green")
       lines(x=c(0.5,0.8),y=c(0.04,0.04),type="l",lwd=2,col="green")
       # ROPE for large effect
-      lines(x=c(-2,-0.8),y=c(0.04,0.04),type="l",lwd=2,col="purple")
-      lines(x=c(0.8,2),y=c(0.04,0.04),type="l",lwd=2,col="purple")
+      lines(x=c(-10,-0.8),y=c(0.04,0.04),type="l",lwd=2,col="purple")
+      lines(x=c(0.8,10),y=c(0.04,0.04),type="l",lwd=2,col="purple")
       
       abline(v=0.8,col="purple",lwd=0.5,lty="dashed")
       abline(v=-0.8,col="purple",lwd=0.5,lty="dashed")
@@ -3971,8 +3971,8 @@ anovaplot = function(dataframe, type="rope", sd="sd", ci=0.95){
       lines(x=c(-0.8,-0.5),y=c(0.04,0.04),type="l",lwd=2,col="green")
       lines(x=c(0.5,0.8),y=c(0.04,0.04),type="l",lwd=2,col="green")
       # ROPE for large effect
-      lines(x=c(-2,-0.8),y=c(0.04,0.04),type="l",lwd=2,col="purple")
-      lines(x=c(0.8,2),y=c(0.04,0.04),type="l",lwd=2,col="purple")
+      lines(x=c(-10,-0.8),y=c(0.04,0.04),type="l",lwd=2,col="purple")
+      lines(x=c(0.8,10),y=c(0.04,0.04),type="l",lwd=2,col="purple")
       
       abline(v=0.8,col="purple",lwd=0.5,lty="dashed")
       abline(v=-0.8,col="purple",lwd=0.5,lty="dashed")
@@ -4172,8 +4172,8 @@ anovaplot = function(dataframe, type="rope", sd="sd", ci=0.95){
       lines(x=c(-0.8,-0.5),y=c(0.04,0.04),type="l",lwd=2,col="green")
       lines(x=c(0.5,0.8),y=c(0.04,0.04),type="l",lwd=2,col="green")
       # ROPE for large effect
-      lines(x=c(-2,-0.8),y=c(0.04,0.04),type="l",lwd=2,col="purple")
-      lines(x=c(0.8,2),y=c(0.04,0.04),type="l",lwd=2,col="purple")
+      lines(x=c(-10,-0.8),y=c(0.04,0.04),type="l",lwd=2,col="purple")
+      lines(x=c(0.8,10),y=c(0.04,0.04),type="l",lwd=2,col="purple")
       
       abline(v=0.8,col="purple",lwd=0.5,lty="dashed")
       abline(v=-0.8,col="purple",lwd=0.5,lty="dashed")
@@ -4224,8 +4224,8 @@ anovaplot = function(dataframe, type="rope", sd="sd", ci=0.95){
       lines(x=c(-0.8,-0.5),y=c(0.04,0.04),type="l",lwd=2,col="green")
       lines(x=c(0.5,0.8),y=c(0.04,0.04),type="l",lwd=2,col="green")
       # ROPE for large effect
-      lines(x=c(-2,-0.8),y=c(0.04,0.04),type="l",lwd=2,col="purple")
-      lines(x=c(0.8,2),y=c(0.04,0.04),type="l",lwd=2,col="purple")
+      lines(x=c(-10,-0.8),y=c(0.04,0.04),type="l",lwd=2,col="purple")
+      lines(x=c(0.8,10),y=c(0.04,0.04),type="l",lwd=2,col="purple")
       
       abline(v=0.8,col="purple",lwd=0.5,lty="dashed")
       abline(v=-0.8,col="purple",lwd=0.5,lty="dashed")
@@ -4275,8 +4275,8 @@ anovaplot = function(dataframe, type="rope", sd="sd", ci=0.95){
       lines(x=c(-0.8,-0.5),y=c(0.04,0.04),type="l",lwd=2,col="green")
       lines(x=c(0.5,0.8),y=c(0.04,0.04),type="l",lwd=2,col="green")
       # ROPE for large effect
-      lines(x=c(-2,-0.8),y=c(0.04,0.04),type="l",lwd=2,col="purple")
-      lines(x=c(0.8,2),y=c(0.04,0.04),type="l",lwd=2,col="purple")
+      lines(x=c(-10,-0.8),y=c(0.04,0.04),type="l",lwd=2,col="purple")
+      lines(x=c(0.8,10),y=c(0.04,0.04),type="l",lwd=2,col="purple")
       
       abline(v=0.8,col="purple",lwd=0.5,lty="dashed")
       abline(v=-0.8,col="purple",lwd=0.5,lty="dashed")
@@ -4326,8 +4326,8 @@ anovaplot = function(dataframe, type="rope", sd="sd", ci=0.95){
       lines(x=c(-0.8,-0.5),y=c(0.04,0.04),type="l",lwd=2,col="green")
       lines(x=c(0.5,0.8),y=c(0.04,0.04),type="l",lwd=2,col="green")
       # ROPE for large effect
-      lines(x=c(-2,-0.8),y=c(0.04,0.04),type="l",lwd=2,col="purple")
-      lines(x=c(0.8,2),y=c(0.04,0.04),type="l",lwd=2,col="purple")
+      lines(x=c(-10,-0.8),y=c(0.04,0.04),type="l",lwd=2,col="purple")
+      lines(x=c(0.8,10),y=c(0.04,0.04),type="l",lwd=2,col="purple")
       
       abline(v=0.8,col="purple",lwd=0.5,lty="dashed")
       abline(v=-0.8,col="purple",lwd=0.5,lty="dashed")
@@ -4377,8 +4377,8 @@ anovaplot = function(dataframe, type="rope", sd="sd", ci=0.95){
       lines(x=c(-0.8,-0.5),y=c(0.04,0.04),type="l",lwd=2,col="green")
       lines(x=c(0.5,0.8),y=c(0.04,0.04),type="l",lwd=2,col="green")
       # ROPE for large effect
-      lines(x=c(-2,-0.8),y=c(0.04,0.04),type="l",lwd=2,col="purple")
-      lines(x=c(0.8,2),y=c(0.04,0.04),type="l",lwd=2,col="purple")
+      lines(x=c(-10,-0.8),y=c(0.04,0.04),type="l",lwd=2,col="purple")
+      lines(x=c(0.8,10),y=c(0.04,0.04),type="l",lwd=2,col="purple")
       
       abline(v=0.8,col="purple",lwd=0.5,lty="dashed")
       abline(v=-0.8,col="purple",lwd=0.5,lty="dashed")
@@ -4657,7 +4657,7 @@ assumption.check = function(x1,x2,x3,x4=NULL,x5=NULL,x6=NULL,conf.level=0.95){
 
 post.pred.check <- function(anovafit, ngroups, out, reps = 50, eta){
   
-  plot(density(out),main="Posterior predictive check")
+  plot(density(out),main="Posterior predictive check",ylim=c(0,max(density(out)$y)*1.5))
   for(i in 1:reps){
     mu1 = sample(anovafit$mu1,size = 1)
     mu2 = sample(anovafit$mu2,size = 1)

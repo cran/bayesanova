@@ -31,7 +31,7 @@ The credible level used for producing credible intervals. The default is \code{c
 }
 }
 \value{
-  Produces plots of the results depending on which type is selected.
+  Produces plots of the results depending on which type is selected. In the default setting, the produced plots include horizontal colored lines which visualize the standard regions of practical equivalence (ROPEs) for the effect size of Cohen. In particular, the ROPE of no effect, \eqn{\delta \in (-0.2,0.2)} is shown as a red horizontal line, the ROPE of a small effect, \eqn{|\delta| \in [0.2,0.5)} is shown as an orange horizontal line, the ROPE of a medium effect, \eqn{|\delta| \in [0.5,0.8)} is shown as an green horizontal line, and the ROPE of a large effect, \eqn{|\delta| \in [0.8,0.\infty)} is shown as a purple horizontal line. Corresponding dashed vertical lines show the boundaries between these default ROPEs for effect sizes.
 }
 \author{
 %%  ~~who you are~~
