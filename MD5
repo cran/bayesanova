@@ -1,9 +1,9 @@
-5ea2fe041986828c4a0519417ad7a3bc *DESCRIPTION
+33ac678212d503fb4361a075c9b3dac4 *DESCRIPTION
 3b6fece37674c4ad766f1ebcbb1e5fad *NAMESPACE
-bd5c9f373a6d2eda58387575375a599a *R/bayes.anova.R
-2e033ed012f0d8dcf541b790e5c49960 *build/partial.rdb
+356ee9a2949aca5b6f2b17c90b79aed5 *R/bayes.anova.R
+e3852e6dfb86b25149a80275f5322079 *build/partial.rdb
 589c2392e8eb8a2260ff23c47d8cccd0 *man/anovaplot.Rd
 994504549d8c813e0f1553694080dc6d *man/assumption.check.Rd
 781d6f76054ca46ca6ade0bc88feaac3 *man/bayes.anova.Rd
-97a9437fed0f5408a4fc0e088c8f71fc *man/bayesANOVA-package.Rd
+e53d014815eb14ad0def5b1fb07504ac *man/bayesANOVA-package.Rd
 26fa5c387492b04379fadc0a6c23086b *man/post.pred.check.Rd

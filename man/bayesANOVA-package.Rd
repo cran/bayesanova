@@ -1,6 +1,5 @@
-\name{bayesANOVA-package}
-\alias{bayesANOVA-package}
-\alias{bayesANOVA}
+\name{bayesanova-package}
+\alias{bayesanova-package}
 \docType{package}
 \title{
 Bayesian ANOVA

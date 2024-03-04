@@ -342,6 +342,12 @@ bayes.anova <- function(n=10000,first,second,third,fourth=NULL,fifth=NULL,sixth=
       C0=-0.5*var(smple)+(c0+1/3*(length(firstComponent)+length(secondComponent)+length(thirdComponent)+length(fourthComponent)+length(fifthComponent)+length(sixthComponent)))*q
     }
   }
+  if(hyperpars == "weaklyinformative"){
+    b0 = 0
+    B0 = 10 # ensures that the range of a priori credible effect sizes is not too large
+    c0 = 2  # mean of inverse gamma distribution is C0/(c0-1) if c0>1; thus c0=2 and C0=10 ensures expected variance of 10/(2-1)=10 a priori 
+    C0 = 10
+  }
   
   
   # Gibbs sampling via full conditionals
